@@ -4,7 +4,7 @@
 - The Frogger project is properly maintained and divided into a few parts.
 
 
-## Table Of Contents
+## Table Of Contents!
 1. Basic Code Maintainability 
 2. Features
 3. Bug Fixes
@@ -32,15 +32,15 @@
 
 
 ### 8. Build Status 
-- Ant build file is added and built successfully.
+Ant build file is added and built successfully.
 
 
 ### 9. Credits
-- This game is improved and extended from https://github.com/hirish99/Frogger-Arcade-Game
+This game is improved and extended from https://github.com/hirish99/Frogger-Arcade-Game
 
 
 ### 10. License 
-- This game is copyright FREE.
+This game is copyright FREE.
 
 
 69 words
