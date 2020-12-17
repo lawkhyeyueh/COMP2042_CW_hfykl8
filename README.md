@@ -25,6 +25,17 @@
 -	**Rearranging Packages:** When the code was first downloaded, all the classes were located in the same directory so it was unorganized and made it hard to work with. The classes were then separated into different packages based on their categories which made it easier to work on.
 
 
+## 4, JUnit Test
+- JUnit 4 has been added into the project and 6 tests have been performed to show my understanding on JUnit. 
+- Junit tests were successful without any errors.
+
+
+## 5. Version Control 
+- GitHub is used as the remote repository for this project and has been used frequently for this project
+- Dev branch was created at the start of the project and it is merged into the master branch after testing to assure it has no issue after the merging.
+- Every commits have been given meaningful comments.
+
+
 ## 7. IDE and JAVA Versions
 [Eclipse IDE 2020-09](https://www.eclipse.org/downloads/)
 <br />
