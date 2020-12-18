@@ -2,6 +2,7 @@ package view;
 
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -30,6 +31,10 @@ public class GameViewManager {
 	public GameViewManager() {
 		initializeStage();
 		createKeyListeners();
+		
+		Image image = new Image("view/Resources/froggerUp.png");
+        gameStage.getIcons().add(image);
+        gameStage.setTitle("Frogger");
 	}
 	
 	private void createKeyListeners() {
@@ -96,6 +101,8 @@ public class GameViewManager {
 		frog.setLayoutX(GAME_WIDTH/2);
 		frog.setLayoutY(GAME_HEIGHT - 90);
 		gamePane.getChildren().add(frog);
+		
+		
 	}
 	
 	

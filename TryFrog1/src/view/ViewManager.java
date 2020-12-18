@@ -61,6 +61,10 @@ public class ViewManager {
 		createButton();
 		createBackground();
 		createLogo();
+		
+		Image image = new Image("view/Resources/froggerUp.png");
+        mainStage.getIcons().add(image);
+        mainStage.setTitle("Frogger");
 	}
 	
 	private void showSubScene(FroggerSubScene subScene) {
@@ -150,6 +154,7 @@ public class ViewManager {
 		return mainStage;
 	}
 	
+	
 	private void addMenuButton(FroggerButton button) {
 		button.setLayoutX(MENU_BUTTONS_START_X);	
 		button.setLayoutY(MENU_BUTTONS_START_Y + menuButtons.size()*100);
@@ -237,7 +242,7 @@ public class ViewManager {
 	
 	
 	private void createBackground() { 
-		Image backgroundImage = new Image("view/resources/CoolMoving_background.gif", 900, 700, false, true);
+		Image backgroundImage = new Image("view/resources/8e8c72a1459ad7332b14306bea1af865.gif", 900, 700, false, true);
 		BackgroundImage background = new BackgroundImage(backgroundImage, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, null);
 		mainPane.setBackground(new Background(background)); // Set Background Image to Main Pane.
 	}
