@@ -236,7 +236,7 @@ public class ViewManager {
 	
 	
 	private void createBackground() { 
-		Image backgroundImage = new Image("view/resources/moving_background.gif", 400, 300, false, true);
+		Image backgroundImage = new Image("view/resources/CoolMoving_background.gif", 900, 700, false, true);
 		BackgroundImage background = new BackgroundImage(backgroundImage, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, null);
 		mainPane.setBackground(new Background(background)); // Set Background Image to Main Pane.
 	}
