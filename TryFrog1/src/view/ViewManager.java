@@ -161,8 +161,8 @@ public class ViewManager {
 		createStartButton();
 		createScoresButton();
 		createHelpButton();
-		createCreaditsButton();
 		createExitButton();
+		createCreaditsButton();
 	}
 	
 	private void createStartButton() {
@@ -205,20 +205,6 @@ public class ViewManager {
 		});
 	}
 	
-	private void createCreaditsButton() {
-		FroggerButton creditsButton = new FroggerButton ("CREDITS");
-		addMenuButton(creditsButton);
-		
-		creditsButton.setOnAction(new EventHandler<ActionEvent>(){
-
-			@Override
-			public void handle(ActionEvent arg0) {
-				showSubScene(creditsSubScene);
-			}
-			
-		});
-	}
-	
 	private void createExitButton() {
 		FroggerButton exitButton = new FroggerButton("EXIT");
 		addMenuButton(exitButton);
@@ -229,6 +215,21 @@ public class ViewManager {
 			public void handle(ActionEvent arg0) {
 				mainStage.close();
 				
+			}
+			
+		});
+	}
+	
+	private void createCreaditsButton() {
+		FroggerButton creditsButton = new FroggerButton ("CREDITS");
+		addMenuButton(creditsButton);
+		
+		creditsButton.setOnAction(new EventHandler<ActionEvent>(){
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				showSubScene(creditsSubScene);
+
 			}
 			
 		});
@@ -246,7 +247,7 @@ public class ViewManager {
 		logo.setFitHeight(350);
 		logo.setFitWidth(450);
 		logo.setPreserveRatio(true);
-		logo.setLayoutX(290);
+		logo.setLayoutX(180);
 		logo.setLayoutY(50);
 		
 		logo.setOnMouseEntered(new EventHandler<MouseEvent>() {
