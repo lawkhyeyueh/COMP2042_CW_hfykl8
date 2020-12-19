@@ -26,6 +26,14 @@
 
 
 ## 2. Features
+1. Main Menu
+2. High Score
+3. Levels
+4. Info Page
+5. Help Scene 
+6. AND MANY MORE!
+<img src="https://github.com/lawkhyeyueh/COMP2042_CW_hfykl8/blob/master/TryFrog1/Simple%20Main%20Menu.png" style="width:300px;"/>
+<img src="https://github.com/lawkhyeyueh/COMP2042_CW_hfykl8/blob/master/TryFrog1/Sick%20Game.png" style="width:300px;"/>
 
 
 ## 3. Bug Fixes
@@ -48,7 +56,8 @@
 <img src="https://github.com/lawkhyeyueh/COMP2042_CW_hfykl8/blob/master/TryFrog1/GitHub%20Commit%20History.png" style="width:300px;"/>
 
 ## 6. Program Improvements
-
+- 100%
+- Alot of hard work put into this game pls appreciate it lah ;)
 
 ## 7. IDE and JAVA Versions
 [Eclipse IDE 2020-09](https://www.eclipse.org/downloads/)
