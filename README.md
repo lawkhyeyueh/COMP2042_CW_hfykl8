@@ -44,7 +44,8 @@
 - GitHub is used as the remote repository for this project and has been used frequently for this project
 - Dev branch was created at the start of the project and it is merged into the master branch after testing to assure it has no issue after the merging.
 - Every commits have been given meaningful comments.
-
+- Over 30+ commits were made and here is a screenshot for some proof.
+<img src="https://github.com/lawkhyeyueh/COMP2042_CW_hfykl8/blob/master/TryFrog1/GitHub%20Commit%20History.png" style="width:300px;"/>
 
 ## 6. Program Improvements
 
