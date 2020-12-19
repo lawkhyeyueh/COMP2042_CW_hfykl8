@@ -69,11 +69,17 @@ public class ViewManager {
 	}
 	
 	//if there is a subscene that needs to be hidden move it 
+
 	/**
 	 * Methods to show Sub scene
 	 * @param subScene
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void showSubScene(FroggerSubScene subScene) {
 		if(sceneToHide != null) {
 			sceneToHide.moveSubScene();
@@ -82,12 +88,17 @@ public class ViewManager {
 		subScene.moveSubScene();
 		sceneToHide=subScene;
 	}
-	
+
 	/**
 	 * Methods to create Sub scene
 	 * create subscene that form up by Level Chooser, Help and Score SubScene Method.
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createSubScene() {
 		
 		
@@ -96,11 +107,16 @@ public class ViewManager {
 		createScoreSubScene();
 		
 	}
-	
+
 	/**
 	 * Methods to create Score sub scene
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createScoreSubScene() {
 		subSceneScore = new FroggerSubScene();
 		mainPane.add(subSceneScore);
@@ -111,10 +127,16 @@ public class ViewManager {
 		subSceneScore.getPane().getChildren().add(heading);
 	
 	}
+
 	/**
 	 * Methods to create help sub scene
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createHelpSubScene() {
 		subSceneHelp = new FroggerSubScene();
 		mainPane.add(subSceneHelp);
@@ -132,10 +154,16 @@ public class ViewManager {
 	}
 
 	//method used to create levelchoosersubscene 
+
 	/**
 	 * Methods to create Level chooser sub scene
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createLevelChooserSubScene() {
 		subSceneLevelChooser= new FroggerSubScene();
 		mainPane.add(subSceneLevelChooser);
@@ -156,11 +184,17 @@ public class ViewManager {
 	}
 	
 	//method below makes the images for the levels
+
 	/**
 	 * Methods for HBox to check if Level is Choosen
 	 * @return box
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private HBox createLevelsToChoose() {
 		HBox box = new HBox();
 		box.setSpacing(20);
@@ -189,9 +223,14 @@ public class ViewManager {
 	
 	/**
 	 * Methods to create start button
-	 * @return start button.
-	 * @author sun
+	 * @return start button
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private FroggerButton createStartButton() {
 		FroggerButton startButton =new FroggerButton("START");
 		startButton.setLayoutX(270);
@@ -216,29 +255,44 @@ public class ViewManager {
 	/**
 	 * Methods to get Main Stage
 	 * @return Main Stage
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	public Stage getMainStage() {
 		return mainStage;
 	}
-	
+
 	/**
 	 * Methods to add Menu Button
 	 * @param FroogerButton button
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void addMenuButton(FroggerButton button) {
 		button.setLayoutX(MENU_BUTTON_START_X);
 		button.setLayoutY(MENU_BUTTON_START_Y+ menuButtons.size() *100);
 		menuButtons.add(button);
 		mainPane.getChildren().add(button);
 	}
-	
+
 	/**
 	 * Methods to create different features of Button
-	 * Createe play, socre, help, exit button and Logo with Icon.
-	 * @author sun
+	 * Create play, score, help, exit button and Logo with Icon.
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createButton() {
 		createPlayButton();
 		createScoreButton();
@@ -250,8 +304,13 @@ public class ViewManager {
 	
 	/**
 	 * Methods to create play button
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createPlayButton() {
 		FroggerButton playButton = new FroggerButton("PLAY");
 		addMenuButton(playButton);
@@ -266,11 +325,16 @@ public class ViewManager {
 		});
 		
 	}
-	
+
 	/**
 	 * Methods to create score button
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createScoreButton() {
 		FroggerButton scoreButton = new FroggerButton("SCORE");
 		addMenuButton(scoreButton);
@@ -284,11 +348,16 @@ public class ViewManager {
 			}
 		});
 	}
-	
+
 	/**
 	 * Methods to create help button
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createHelpButton() {
 		FroggerButton helpButton = new FroggerButton("HELP");
 		addMenuButton(helpButton);
@@ -302,11 +371,16 @@ public class ViewManager {
 			}
 		});
 	}
-	
+
 	/**
 	 * Methods to create exit button
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createExitButton() {
 		FroggerButton exitButton = new FroggerButton("EXIT");
 		addMenuButton(exitButton);
@@ -324,19 +398,29 @@ public class ViewManager {
 
 	/**
 	 * Methods to create background for menu panel
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createBackground() {
 		Image backgroundImage= new Image("view/ViewResources/8e8c72a1459ad7332b14306bea1af865.gif",1100,900,true,false);
 		BackgroundImage background = new BackgroundImage(backgroundImage, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT,BackgroundPosition.DEFAULT,null);
 		mainPane.setBackground(new Background(background));
 		
 	}
-	
+
 	/**
 	 * Methods to create logo for menu
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createLogo() {
 		ImageView logo= new ImageView("view/ViewResources/frogger-logo-2.png");
 		logo.setFitHeight(350);
@@ -365,11 +449,16 @@ public class ViewManager {
 		
 		mainPane.getChildren().add(logo);
 	}
-	
+
 	/**
 	 * Methods to create icon for menu
-	 * @author sun
+	 * 	
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createIcon() {
 		ImageView icon = new ImageView("view/ViewResources/frog.png");
 		

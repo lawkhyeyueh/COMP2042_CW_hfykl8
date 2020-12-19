@@ -15,9 +15,13 @@ import model.WetTurtle;
 
 /**
  * This class is used to make each of the object that the GameViewManager Class will later render
- * @author Sun
+ * 
+ * @author lawkhyeyueh
+ * @version final 6.9
+ * @since 2020-12-12
  *
  */
+
 public class GameSetter {
 	
 	private ArrayList<Actor> objects= new ArrayList<Actor>();
@@ -33,7 +37,7 @@ public class GameSetter {
     private static final String CROCODILE_RIGHT = "file:src/model/ActorResources/crocodile.png";
     private static final String CROCODILE_LEFT = "file:src/model/ActorResources/crocodileleft.png";
     private static final String CROC_HEAD_= "file:src/model/ActorResources/crochead.png";
-	
+
     /**
      * Class for Game Setter
      * @param numOfLogs
@@ -42,10 +46,13 @@ public class GameSetter {
      * @param numOfTurtles
      * @param numOfCrocodiles
      * @param CrocHead
-     * @author sun
      * 
-     *make Frogger
+     * @author lawkhyeyueh
+     * @version final 6.9
+     * @since 2020-12-12
+     *
      */
+    
 	public GameSetter(int numOfLogs, int numOfCars, int numOfTrucks, int numOfTurtles, int numOfCrocodiles, boolean CrocHead) {
 		//objects.clear();
 		createLog(numOfLogs, (int)Math.ceil(numOfLogs/2), numOfLogs);
@@ -67,16 +74,28 @@ public class GameSetter {
 	
 	/**
 	 * This method makes a crocHead object and then adds it to the objects ArrayList
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createCrocHeads() {
 		CrocHead crocHead=new CrocHead(CROC_HEAD_,65,0,65,6);
 		objects.add(crocHead);
 	}
-	
+
 	/**
 	 * Method makes Crocodile Obstacles, moving towards the right, according to the argument passed in and adds it to the objects ArrayList
 	 * @param numOfCrocodiles specifies the number of crocodiles that need to be created
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createCrocodilesRight(int numOfCrocodiles) {
 		int xpos=0;
 		for(int i=0; i<numOfCrocodiles;i++) {
@@ -86,10 +105,17 @@ public class GameSetter {
 		}
 		
 	}
+
 	/**
 	 * Method makes Crocodile Obstacles, moving towards the right, according to the argument passed in and adds it to the objects ArrayList
 	 * @param numOfCrocodiles specifies the number of crocodiles that need to be created
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createCrocodilesLeft(int numOfCrocodiles) {
 		int xpos=0;
 		for(int i=0; i<numOfCrocodiles;i++) {
@@ -99,13 +125,16 @@ public class GameSetter {
 		}
 		
 	}
-	
-
 
 	/**
-     * Method Create five End objects and adds it to the objects {@link ArrayList}
-     * @author sun
-     */
+	 * Method Create five End objects and adds it to the objects {@link ArrayList}
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	private void createEnd() {
 		int xpos= 12; //128++
 		for(int i=0;i<5;i++) {
@@ -114,20 +143,31 @@ public class GameSetter {
 			xpos+=128;
 		}	
 	}
-	
+
 	/**
 	 * Makes Animal object called frogger and adds it to the ArrayList 
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
-
+	
 	private void makeFrogger() {
 		frogger = new Animal();
 		objects.add(frogger);
 	}
+
 	/**
 	 * Makes Turtle Objects according to argument and adds it to the objects ArrayList.
 	 * @param turtleNum specifies number of turtle objects that need to be created
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
-
+	
 	private void createTurtle(int turtleNum) {
 		int xpos=300;
 		for(int i=0;i<turtleNum;i++) {
@@ -137,11 +177,17 @@ public class GameSetter {
 		}
 	createWetTurle(turtleNum*2);	
 	}
-	
+
 	/**
 	 * Create WetTurtle objects and adds it to the ArrayList . The number that is created is based on total Turtle objects that were created.
 	 * @param turtleNum specifies number of WetTurles needed to be created
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createWetTurle(int turtleNum) {
 		int xpos=200;
 		for(int i=0;i<turtleNum;i++) {
@@ -152,13 +198,19 @@ public class GameSetter {
 		objects.add(new WetTurtle(700, 376, -1, 130, 130));
 		
 	}
-	
+
 	/**
 	 * Is a container method that passes in values that it receives to other methods in order to create Logs
 	 * @param firstQuadNum specifies number of Log objects to be created for the first row
 	 * @param secondQuad specifies number of Log Objects to be created for the second row
 	 * @param thirdQuadNum specifies number of Log objects to be created for the third row
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createLog(int firstQuadNum, int secondQuad, int thirdQuadNum) {
 		
 		createLogForFirstQuad(firstQuadNum);
@@ -168,10 +220,17 @@ public class GameSetter {
 		createLogForThirdQuad(thirdQuadNum);		
 		
 	}
+
 	/**
 	 * Creates Log objects for the first row and adds it to the ArrayList	
 	 * @param firstQuadNum specifies number of Log objects to be created for the first row
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createLogForFirstQuad(int firstQuadNum){
 		int xpos=0;
 		for(int i=0; i < firstQuadNum; i++) {
@@ -180,11 +239,17 @@ public class GameSetter {
 			xpos+=276;
 		}
 	}
-	
+
 	/**
 	 * Creates Log objects for the second row and adds it to the ArrayList	
 	 * @param secondQuadNum specifies number of Log objects to be created for the second row
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createLogForSecondQuad(int secondQuadNum){
 		int xpos=0;
 		for(int i=0; i < secondQuadNum; i++) {
@@ -197,7 +262,13 @@ public class GameSetter {
 	/**
 	 * Creates Log objects for the third row and adds it to the ArrayList.
 	 * @param thirdQuadNum specifies number of Log objects to be created for the third row
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createLogForThirdQuad(int thirdQuadNum) {
 		int xpos=50;
 		for(int i=0; i < thirdQuadNum; i++) {
@@ -206,11 +277,17 @@ public class GameSetter {
 			xpos+=220;
 		}
 	}
-	
+
 	/**
 	 * Creates Obstacle objects, that will be presented on the GUI as slow cars, it then adds these objects to the ArrayList.
 	 * @param carNum specifies how many Obstacle objects will be created as slow cars
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createSlowCars(int carNum) {
 		int xpos=100;
 		for (int i=0; i< carNum; i++) {
@@ -224,7 +301,13 @@ public class GameSetter {
 	/**
 	 * Creates Obstacle objects that will be presented on the GUI as fast cars, it then adds these objects to the ArrayList.
 	 * @param carNum specifies number of Obstacle objects that will be created as fast cars
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createFastCars(int carNum) {
 		int xpos=500;
 		for (int i=0; i< carNum; i++) {
@@ -237,7 +320,13 @@ public class GameSetter {
 	/**
 	 * Creates Obstacle objects that will be presented on the GUI as Small trucks, it then adds these objects to the ArrayList
 	 * @param truckNum specifies number of Obstacle objects that will be created as small trucks 
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void createSmallTrucks(int truckNum) {
 	int xpos=0;
 	for (int i=0; i< truckNum; i++) {
@@ -250,6 +339,11 @@ public class GameSetter {
 	/**
 	 * Creates Obstacle objects that will be presented on the GUI as Large trucks, it then adds these objects to the ArrayList
 	 * @param truckNum specifies number of Obstacle objects that will be created as large trucks 
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
 	
 	private void createLargeTrucks(int truckNum) {
@@ -264,6 +358,11 @@ public class GameSetter {
 	/**
 	 * Gets ArrayList that has Actor objects inside it.
 	 * @return returns the objects ArrayList 
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
 	
 	public ArrayList<Actor> getArrayList(){
@@ -273,7 +372,13 @@ public class GameSetter {
 	/**
 	 * Returns an Actor.
 	 * @return returns Actor Animal called frogger
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	public Actor getFrogger() {
 		return frogger;
 	}

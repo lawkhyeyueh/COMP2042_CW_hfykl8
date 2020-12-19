@@ -14,10 +14,15 @@ public class CrocHead extends Actor{
 	private double speed;
 	
 	/**
-     * Method to set visibility
+     * This method is to set the visibility
      * Set visibility to false if X, Y under certain conditions.
-     * @author sun
-     */
+	 *
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	@Override
 	public void act(long now) {
 		this.setVisible(false);
@@ -31,6 +36,7 @@ public class CrocHead extends Actor{
 		 }
 		
 	}
+
 	/**
      * Method to set position of Crocodile Head
      * @param imageLink
@@ -39,8 +45,13 @@ public class CrocHead extends Actor{
      * @param ypos
      * @param s
      * Set Image Size, Speed, and add elements to list.
-     * @author sun
-     */
+	 *
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public CrocHead(String imageLink ,int size, int xpos, int ypos, double s) {
 		setImage(new Image(imageLink, size,size, true, true));
 		setX(xpos);
@@ -48,12 +59,17 @@ public class CrocHead extends Actor{
 		this.speed = s;	
 		addElementsToList();
 	}
-	
+
 	/**
      * Method to set get random element
      * @return xPosition
-     * @author sun
-     */
+	 *
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	private int getRandomElement() 
     { 
         Random rand = new Random(); 
@@ -63,9 +79,14 @@ public class CrocHead extends Actor{
 	/**
      * Method to add Elements to List
      * @param Xpos
-     * Setting X postion. 
-     * @author sun
-     */
+     * Setting X position
+	 *
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	private void addElementsToList() {
 		 int xpos=12;
 		for(int i=0; i<5;i++) {

@@ -6,6 +6,15 @@ import view.ViewManager;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * This is the main class that runs everything.
+ * Without this class, everything else is rendered useless as it cannot compile.
+ * 
+ * @author lawkhyeyueh
+ * @version final 6.9
+ * @since 2020-12-12
+ *
+ */
 
 public class Main extends Application {
 	@Override

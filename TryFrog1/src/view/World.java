@@ -17,10 +17,16 @@ public class World extends Pane {
     public World() {
     	createSceneChangeListner();
     }
+
     /**
 	 * Methods to create Scene Change 
-	 * @author sun
-	 */
+     * 
+     * @author lawkhyeyueh
+     * @version final 6.9
+     * @since 2020-12-12
+     *
+     */
+    
     private void createSceneChangeListner() {
     	sceneProperty().addListener(new ChangeListener<Scene>() {
 
@@ -67,12 +73,16 @@ public class World extends Pane {
 		
 	}
     
-	
     /**
 	 * Methods to add Node
 	 * @param node
-	 * @author sun
-	 */
+     * 
+     * @author lawkhyeyueh
+     * @version final 6.9
+     * @since 2020-12-12
+     *
+     */
+    
     public void add(Node node) {
         getChildren().add(node);
     }
@@ -80,18 +90,28 @@ public class World extends Pane {
     /**
 	 * Methods to remove node
 	 * @param node
-	 * @author sun
-	 */
+     * 
+     * @author lawkhyeyueh
+     * @version final 6.9
+     * @since 2020-12-12
+     *
+     */
+    
     public void remove(Node node) {
         getChildren().remove(node);
     }
-    
+
     /**
 	 * Methods to return list of Actor Objects
 	 * @param object
 	 * @return someArray
-	 * @author sun
-	 */
+     * 
+     * @author lawkhyeyueh
+     * @version final 6.9
+     * @since 2020-12-12
+     *
+     */
+    
     public <A extends Actor> List<A> getObjects(Class<A> cls) {
         ArrayList<A> someArray = new ArrayList<A>();
         //checking if the object cls that we have passed into the method is an instance of Node class

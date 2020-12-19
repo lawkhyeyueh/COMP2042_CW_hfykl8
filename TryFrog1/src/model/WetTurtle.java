@@ -15,13 +15,18 @@ public class WetTurtle extends Actor{
 	private static final String TURTLEANIMATION2WET_URL ="file:src/model/ActorResources/TurtleAnimation2Wet.png";
 	private static final String TURTLEANIMATION3WET_URL ="file:src/model/ActorResources/TurtleAnimation3Wet.png";
 	private static final String TURTLEANIMATION4WET_URL ="file:src/model/ActorResources/TurtleAnimation4Wet.png";
-	
+
 	/**
-     * Method to  act for Wet Turtle
+     * Method to act for Wet Turtle
      * @param now
-     * Get X speed, and re-set it.
-     * @author sun
-     */
+     * Get X speed, and reset it
+     * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	@Override
 	public void act(long now) {
 
@@ -47,7 +52,7 @@ public class WetTurtle extends Actor{
 		if (getX() < -75 && speed<0)
 			setX(600);
 	}
-	
+
 	/**
      * Method to set Wet turtle Image
      * @param imageLink
@@ -56,8 +61,13 @@ public class WetTurtle extends Actor{
      * @param ypos
      * @param s
      * @return points
-     * @author sun
-     */
+     * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public WetTurtle(int xpos, int ypos, int s, int w, int h) {
 		turtle1 = new Image(TURTLEANIMATION1_URL, w, h, true, true);
 		turtle2 = new Image(TURTLEANIMATION2WET_URL, w, h, true, true);
@@ -68,12 +78,17 @@ public class WetTurtle extends Actor{
 		this.speed = s;
 		setImage(turtle2);
 	}
-	
+
 	/**
      * Method boolean return Sunk
      * @return sunk
-     * @author sun
-     */
+     * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public boolean isSunk() {
 		return sunk;
 	}

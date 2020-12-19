@@ -28,12 +28,15 @@ import model.MenuModels.InfoLabel;
 import model.MenuModels.LEVEL;
 
 /**
- * This class is called the GameViewManager and it is responsible for rendering the view of the program.
+* This class is called the GameViewManager and it is responsible for rendering the view of the program.
  * It makes a World Object, a Game Setter Object and then makes these two work together in a timer. 
- * @author Sun
  * 
+ * @author lawkhyeyueh
+ * @version final 6.9
+ * @since 2020-12-12
  *
  */
+
 public class GameViewManager {
 	
 	private World background;
@@ -70,12 +73,16 @@ public class GameViewManager {
 		createBackground();
 		
 	}
-	
-	/**
-	 * The initializeStage() method is able used to set up the Scene and the stage for the constructor.
-	 * @author sun
-	 */
 
+	/**
+* The initializeStage() method is able used to set up the Scene and the stage for the constructor.
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	private void initializeStage() {
 		background= new World();
 		gameScene = new Scene(background, GAME_WIDTH, GAME_HEIGHT);
@@ -89,7 +96,11 @@ public class GameViewManager {
 	
 	/**
 	 * The createBackground method sets the background Image in the world object.
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
 	
 	private void createBackground() {
@@ -97,11 +108,17 @@ public class GameViewManager {
 		backgroundImage.setImage( new Image(BACKGROUND_IMAGE,600,800,true,false));
 		background.add(backgroundImage);
 		}
+	
 	/**
-	 * This method is set to public and will be accessed by a class that makes a GameViewManager object. 
+ * This method is set to public and will be accessed by a class that makes a GameViewManager object. 
 	 * This method is used in order to hide passed in screen and show the present one.
 	 * @param menuStage is used to hide the Stage specified here
 	 * @param choosenLevel is an instance of enum and is used as an argument to the method createGameAccording to level
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
 	
 	public void createNewGame(Stage menuStage, LEVEL choosenLevel) {
@@ -115,6 +132,11 @@ public class GameViewManager {
 	/**
 	 * Calls startGame method according to level chosen by the user.
 	 * @param choosenLevel specifies which level has been chosen by the user
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
 	
 	private void createGameAccordingToLevel(LEVEL choosenLevel) {
@@ -136,6 +158,7 @@ public class GameViewManager {
 		}
 		
 	}
+
 	/**
 	 * Method is used to create Game according to whatever the chosen level is. 
 	 * This method creates Gamesetter object according all the arguments that it receives.
@@ -145,7 +168,13 @@ public class GameViewManager {
 	 * @param numOfTurtles number of turtles in the game
 	 * @param numOfCrocodiles number of Crocodiles in the game
 	 * @param CrocHead specifies whether there is going to be a CrocHead in the game or not
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void startGame(int numOfLogs, int numOfCars, int numOfTrucks, int numOfTurtles, int numOfCrocodiles, boolean CrocHead) {
 			createNameDialog();
 			GameSetter game = new GameSetter(numOfLogs,numOfCars,numOfTrucks,numOfTurtles,numOfCrocodiles,CrocHead);
@@ -180,22 +209,34 @@ public class GameViewManager {
 		}
 		
 	}
-
+	
 	/**
 	 * This method is used to set Objects received from the Gamesetter object in an ArrayList to the world Object.
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void setObjectsToBackground() {
 		for(int i=0; i<objects.size();i++) {
 			background.add(objects.get(i));
 		}
 	}
+	
 	/**
 	 * Is used to create the Animation Timer. 
 	 * In the timer's handle method it is checked whether the game is over i.e. the user has died thrice.
 	 * The handle method also checks whether there is a change of score, if there is score is updated accordingly.
 	 * Handle method also checks if stage is ended, if it is it calls showSpeedChange method, it also increases the speed for the next stage of the level.
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
-		
+	
 	public void createTimer() {
         timer = new AnimationTimer() {
             @Override
@@ -244,10 +285,17 @@ public class GameViewManager {
             }
         };
     }
+	
 	/**
 	 * Method checks boolean variable speed change.
 	 * @return if speedChange is true return true else return false
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	 public boolean hasSpeedChanged() {
 	    	if(speedChange) {
 	    		speedChange=false;
@@ -256,8 +304,14 @@ public class GameViewManager {
 	    	else 
 	    		return false;
 	    }
+	 
 	 /**
 	  * Makes speedChange label, adds it to the World Object and also sets its visibility to false initially.
+	  * 
+	  * @author lawkhyeyueh
+	  * @version final 6.9
+	  * @since 2020-12-12
+	  *
 	  */
 	
 	private void makeSpeedChange() {
@@ -268,9 +322,15 @@ public class GameViewManager {
 		background.add(speedLabel);
 		speedLabel.setVisible(false);
 	}
+	
 	/**
-	 * Stops the timer, has a transition that flashes the speedChange label on screen.
-	 * After transition finishes it starts the timer again from the point it left off and sets visibility of the speedLabel to false.
+* Stops the timer, has a transition that flashes the speedChange label on screen.
+	 * After transition finishes it starts the timer again from the point it left off and sets visibility of the speedLabel to false
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
 	
 	private void showSpeedChange() {
@@ -294,8 +354,13 @@ public class GameViewManager {
 	
 	/**
 	 * Plays background Music by using MediaPlayer and Media Objects.
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
-
+	
 	public void playMusic() {
 			String musicFile = MUSIC_URL;   
 			Media sound = new Media(new File(musicFile).toURI().toString());
@@ -303,12 +368,17 @@ public class GameViewManager {
 			mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
 		    mediaPlayer.play();
 		}
-
-
+	
 	/**
 	 * Method shows points and any change in points on the Gui according to argument received.
 	 * @param n is the change of score received. 
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
     public void setNumber(int n) {
     	int shift = 0;
     	while (n > 0) {

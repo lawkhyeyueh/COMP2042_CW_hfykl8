@@ -14,8 +14,13 @@ public class Digit extends ImageView{
      * @param x
      * @param y
      * Set Image, X and Y position
-     * @author sun
-     */
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public Digit(int n, int dim, int x, int y) {
 		im1 = new Image("file:src/model/ActorResources/"+n+".png", dim, dim, true, true);
 		setImage(im1);

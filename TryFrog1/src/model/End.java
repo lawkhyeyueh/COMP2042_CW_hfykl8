@@ -8,14 +8,19 @@ public class End extends Actor{
 	
 	private static final String END_URL="file:src/model/ActorResources/End.png";
 	private static final String SET_END_URL="file:src/model/ActorResources/FrogEnd.png";
-	
+
 	/**
      * Method for Set position when END
      * @param x
      * @param y
      * Set image 
-     * @author sun
-     */
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public End(int x, int y) {
 		setX(x);
 		setY(y);
@@ -24,18 +29,28 @@ public class End extends Actor{
 	
 	/**
      * Method to set END
-     * @author sun
-     */
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public void setEnd() {
 		setImage(new Image(SET_END_URL, 70, 70, true, true));
 		activated = true;
 		counter++;
 	}
-	
+
 	/**
      * Method to set END
-     * @author sun
-     */
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public void unsetEnd() {
 		setImage(new Image(END_URL, 60, 60, true, true));
 		activated=false;
@@ -43,9 +58,14 @@ public class End extends Actor{
 	
 	/**
      * Method boolean is Activated
-     * return activated
-     * @author sun
-     */
+     * @return activated
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public boolean isActivated() {
 		return activated;
 	}

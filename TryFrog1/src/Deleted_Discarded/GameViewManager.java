@@ -4,6 +4,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+/**
+ * It is what it is.
+ * 
+ * @author lawkhyeyueh
+ * @version final 6.9
+ * @since 2020-12-12
+ *
+ */
+
 public class GameViewManager {
 	
 	private static final int GAME_WIDTH = 600;

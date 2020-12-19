@@ -1,6 +1,14 @@
 package model.MenuModels;
 
-//This is a class for different frog that can be choose by user.
+/**
+ * This is a class for different frogs that can be chosen by the user
+ * 
+ * @author lawkhyeyueh
+ * @version final 6.9
+ * @since 2020-12-12
+ *
+ */
+
 public enum LEVEL {
 
 	LAZY("view/ViewResources/levelchooser/FrogB.png"),

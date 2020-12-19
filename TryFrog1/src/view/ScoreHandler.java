@@ -98,8 +98,13 @@ public class ScoreHandler {
 	 * Method that returns a high score list
 	 * @param getHighScoreList
 	 * @return a high Score list
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	public ArrayList<String> getHighScoresList(){
 		return highScoresList;
 	}
@@ -108,8 +113,13 @@ public class ScoreHandler {
 	 * Method to get High score for each Level
 	 * @param numOfLevel
 	 * @return integer.parseInt
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	public int getHighScoreForLevel(int numOfLevel) {
 		return Integer.parseInt((highScoresList.get(numOfLevel).split(":")[1])) ;
 	}

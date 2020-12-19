@@ -9,11 +9,16 @@ public class Crocodile extends Actor {
 	@Override
 	
 	/**
-     * Method to  set movement speeed 
+     * This method is to set movement speed 
      * @param now
-     * Get X speed, and re-set it.
-     * @author sun
-     */
+     * Get X speed, and reset it.
+     * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public void act(long now) {
 		move(speed , 0);
 		if (getX() > 600 && speed>0)
@@ -30,8 +35,13 @@ public class Crocodile extends Actor {
      * @param ypos
      * @param s
      * @return points
-     * @author sun
-     */
+	 *
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public Crocodile(String imageLink, int xpos, int ypos, int s, int w, int h) {
 		setImage(new Image(imageLink, w,h, true, true));
 		setX(xpos);
@@ -42,8 +52,13 @@ public class Crocodile extends Actor {
 	/**
      * Method boolean return Speed
      * @return Speed must be less than 0
-     * @author sun
-     */
+	 *
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+	
 	public boolean getLeft() {
 		return speed < 0;
 	}

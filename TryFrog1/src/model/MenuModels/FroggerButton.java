@@ -29,8 +29,13 @@ public class FroggerButton extends Button {
 	
 	/**
 	 * Method to set the Font of the Button
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	public void setButtonFont() {
 		
 		try {
@@ -40,36 +45,49 @@ public class FroggerButton extends Button {
 		}
 		
 	}
-	
-	
+
 	/**
 	 * Method to style the button when button is pressed
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void setButtonPressedStyle() {
 		setStyle(BUTTON_PRESSED_STYLE);
 		setPrefHeight(45);
 		setLayoutY(getLayoutY() + 4);
 	}
 
-	
 	/**
-	 * Method to style button when button is not pressed (normal condiotion)
-	 * @author sun
+	 * Method to style button when button is not pressed (in its normal condition)
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void setButtonReleasedStyle() {
 		setStyle(BUTTON_RELEASED_STYLE);
 		setPrefHeight(49);
 		setLayoutY(getLayoutY() - 4);
 		
 	}
-	
+
 	/**
 	 * Method to initialize the button 
 	 * Either when mouse pressed, released, or when mouse entered the button
-	 * Use for detection.
-	 * @author sun
+	 * Used for detection
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void intitializeButtonListners() {
 		
 		

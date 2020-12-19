@@ -55,16 +55,16 @@ public class InfoLabel extends Label{
 		
 	}
 	
-	
-	
-	
-	
-	
 	/**
 	 * Method to set font of the label
 	 * @param fontPath
-	 * @author sun
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
 	 */
+	
 	private void setLabelFont(String fontPath) {
 		try {
 			setFont(Font.loadFont(new FileInputStream(new File(fontPath)), 23));

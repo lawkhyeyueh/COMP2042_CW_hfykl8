@@ -5,14 +5,29 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
+/**
+ * In this class we have created a VBox that contains the visual images
+ * 
+ * @author lawkhyeyueh
+ * @version final 6.9
+ * @since 2020-12-12
+ *
+ */
 
-//in this class we're creating a Vbox that contains the images 
 public class LevelPicker extends VBox{
 	
 	private ImageView frogLevelImage;
 	private ImageView circleImage;
 	
-	//strings to store the path to images that will be presented on the subscene 
+	/**
+	 * The strings here are to store the path to images that will be presented on the subscene
+	 * 
+	 * @author lawkhyeyueh
+	 * @version final 6.9
+	 * @since 2020-12-12
+	 *
+	 */
+
 	private String circleNotChoosen= "view/ViewResources/levelchooser/grey_circle.png";
 	private String circleChoosen ="view/ViewResources/levelchooser/circle_choosen.png";
 	
