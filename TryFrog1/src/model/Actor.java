@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * This abstract class extends ImageView and allows for other class to implement its act method. It manipulates ImageView by moving it around in the GUI and
  * check for any collisions.
- * @author Sun
+ * @author Asus
  *
  */
 public abstract class Actor extends ImageView{
@@ -52,9 +52,9 @@ public abstract class Actor extends ImageView{
     
     /**
      * Is a method that 
-     * @param <A >
+     * @param <A extends Actor> 
      * @param cls
-     * @return
+     * @return array
      */
     public <A extends Actor> java.util.List<A> getIntersectingObjects(java.lang.Class<A> cls){
         ArrayList<A> someArray = new ArrayList<A>(); //new array list of type A which is an actor

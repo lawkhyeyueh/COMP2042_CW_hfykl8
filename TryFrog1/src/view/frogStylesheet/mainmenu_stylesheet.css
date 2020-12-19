@@ -1,0 +1,32 @@
+.group{
+	-fx-font-size:50px;
+}
+
+#menutext{
+	-fx-font-size:30px;
+	-fx-fill: white;
+	-fx-font-wight:bold;
+	
+}
+
+.button{
+	-fx-border-radius:8px; 
+	-fx-border-width:3px;
+	-fx-border-color:#000000;
+	-fx-background-color:transparent;
+	-fx-text-fill:blue;
+	-fx-padding: 5px 25px 5px 25px;
+}
+
+.button:hover{
+	-fx-border-radius:8px;
+	-fx-border-width:3px;	 
+	-fx-border-color:#FFFFFF;
+	-fx-background-color: transparent;
+	-fx-text-fill: #000000;
+	-fx-rotate: 5;
+	
+	
+}
+
+

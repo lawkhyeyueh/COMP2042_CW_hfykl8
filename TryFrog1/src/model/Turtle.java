@@ -7,13 +7,20 @@ public class Turtle extends Actor{
 	Image turtle2;
 	Image turtle3;
 	
-	private static final String TURTLEANIMATION_1="file:src/model/ActorResources/TurtleAnimation1.png"; //set turtle Image
+	private static final String TURTLEANIMATION_1="file:src/model/ActorResources/TurtleAnimation1.png";
 	private static final String TURTLEANIMATION_2="file:src/model/ActorResources/TurtleAnimation2.png";
 	private static final String TURTLEANIMATION_3="file:src/model/ActorResources/TurtleAnimation3.png";
 	
-	private int speed;
-	int i = 1;
+	private int speed=0;
 	boolean bool = true;
+	
+	
+	/**
+     * Method to  act for Turtle
+     * @param now
+     * Get X speed, and re-set it.
+     * @author sun
+     */
 	@Override
 	public void act(long now) {
 
@@ -36,15 +43,24 @@ public class Turtle extends Actor{
 		if (getX() < -75 && speed<0)
 			setX(600);
 	}
+	
+	/**
+     * Method to set turtle Image
+     * @param imageLink
+     * @param size
+     * @param xpos
+     * @param ypos
+     * @param s
+     * @return points
+     * @author sun
+     */
 	public Turtle(int xpos, int ypos, int s, int w, int h) {
 		turtle1 = new Image(TURTLEANIMATION_1, w, h, true, true);
 		turtle2 = new Image(TURTLEANIMATION_2, w, h, true, true);
 		turtle3 = new Image(TURTLEANIMATION_3, w, h, true, true);
 		setX(xpos);
 		setY(ypos);
-		speed = s;
+		this.speed = s;
 		setImage(turtle2);
 	}
-	
-	
 }

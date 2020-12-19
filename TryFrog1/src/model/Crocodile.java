@@ -2,19 +2,19 @@ package model;
 
 import javafx.scene.image.Image;
 
-public class Obstacle extends Actor{
-	//int speedMultiplier;
-	private int speed=0;
+public class Crocodile extends Actor {
+	
+	
+	private double speed=0;
+	@Override
 	
 	/**
-     * Method to  set movement speeed  for obstacle
+     * Method to  set movement speeed 
      * @param now
      * Get X speed, and re-set it.
      * @author sun
      */
-	@Override
 	public void act(long now) {
-		this.speed =getSpeed()*this.speed;
 		move(speed , 0);
 		if (getX() > 600 && speed>0)
 			setX(-200);
@@ -23,7 +23,7 @@ public class Obstacle extends Actor{
 	}
 	
 	/**
-     * Method set Obstacle Image
+     * Method set Crododile Image
      * @param imageLink
      * @param size
      * @param xpos
@@ -32,13 +32,22 @@ public class Obstacle extends Actor{
      * @return points
      * @author sun
      */
-	public Obstacle(String imageLink, int xpos, int ypos, int s, int w, int h) {	
+	public Crocodile(String imageLink, int xpos, int ypos, int s, int w, int h) {
 		setImage(new Image(imageLink, w,h, true, true));
 		setX(xpos);
 		setY(ypos);
-		this.speed=s;
-		//increaseSpeed=this.speed;
+		this.speed = s;	
+	}
+	
+	/**
+     * Method boolean return Speed
+     * @return Speed must be less than 0
+     * @author sun
+     */
+	public boolean getLeft() {
+		return speed < 0;
+	}
 		
 	}
 
-}
+
